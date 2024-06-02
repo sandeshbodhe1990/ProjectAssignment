@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "93f9d090-2d8a-4e1f-aab4-e2265b747a5e",
+		"name": "Customer Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35949731"
+	},
+	"item": [
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "abcde12345"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"custName\": \"bodhe\",\r\n    \"contactNo\": \"0000000\",\r\n    \"email\": \"abc.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/demo/updateCustomerInfo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"demo",
+						"updateCustomerInfo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "abcde12345"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"custName\": \"sandesh\",\r\n    \"contactNo\": \"8899889988\",\r\n    \"email\": \"abc.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/createNewCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"createNewCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "abcde12345",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orders\": [\r\n        {\r\n            \"productName\": \"product1\",\r\n            \"productCost\": 100\r\n        },\r\n        {\r\n            \"productName\": \"product2\",\r\n            \"productCost\": 200\r\n        },\r\n        {\r\n            \"productName\": \"product3\",\r\n            \"productCost\": 300\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/demo/addOrders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"demo",
+						"addOrders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "abcde12345"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"custName\": \"sandesh\",\r\n  \"contactNo\": \"8899889988\",\r\n  \"email\": \"abc.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/demo/getCustomerDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"demo",
+						"getCustomerDetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
